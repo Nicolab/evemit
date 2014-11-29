@@ -1,0 +1,40 @@
+{
+  "name": "evemit",
+  "version": "1.0.0",
+  "description": "Minimal and fast JavaScript event emitter for Node.js and front-end (only 1kb minified!).",
+  "main": "./evemit.js",
+  "keywords": [
+    "event",
+    "emitter",
+    "listener"
+  ],
+  "homepage": "https://github.com/Nicolab/evemit",
+  "author": {
+    "name": "Nicolas Tallefourtane",
+    "url": "http://nicolab.net"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/Nicolab/evemit/blob/master/LICENSE"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Nicolab/evemit.git"
+  },
+  "bugs": "https://github.com/Nicolab/evemit/issues",
+  "scripts": {
+    "test": "mocha test/test.js"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-header": "^1.2.2",
+    "gulp-livereload": "^2.1.1",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^1.0.1",
+    "gulp-webpack": "^1.1.0",
+    "webpack": "^1.4.13",
+    "unit.js": "^1.0.2"
+  }
+}
