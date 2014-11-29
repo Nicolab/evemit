@@ -171,9 +171,9 @@ var lastListener = obj.listeners('my-event').pop();
 // ...
 ```
 
-Use the property `obj.events` if you want get an object like
+Use the property `obj.events` if you want to get an object like
 ```
-{event1: [<array of listeners>], event2: [<array of listeners>], ...}
+{event1: [array of listeners], event2: [array of listeners], ...}
 ```
 
 

@@ -133,8 +133,8 @@
    * Get a list of assigned event listeners.
    *
    * @param {string} [event] The events that should be listed.
-   * If not provided, all listeners are retourned.
-   * Use the property `Evemit.events` if you want get an object like
+   * If not provided, all listeners are returned.
+   * Use the property `Evemit.events` if you want to get an object like
    * ```
    * {event1: [array of listeners], event2: [array of listeners], ...}
    * ```
