@@ -1,3 +1,6 @@
+evemit.min.js
+test/unit.js
+test/test-webpacked.js
 *.log
 dist/
 node_modules/
