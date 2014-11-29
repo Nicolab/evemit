@@ -3,7 +3,7 @@
 [![Actual version published on NPM](https://badge.fury.io/js/evemit.png)](https://www.npmjs.org/package/evemit)
 [![npm module downloads per month](http://img.shields.io/npm/dm/evemit.svg)](https://www.npmjs.org/package/evemit)
 
-Minimal and fast JavaScript event emitter for Node.js and front-end.
+Minimal and fast JavaScript event emitter for Node.js and front-end.<br>
 Only 1kb minified (554 bytes gzipped).
 
 
