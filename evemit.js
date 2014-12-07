@@ -87,12 +87,25 @@
       }
 
       // Function.apply() is a bit slower, so try to do without
-      if      (aLn === 0) {  fn.call(fn._E_ctx);                          }
-      else if (aLn === 1) {  fn.call(fn._E_ctx, arg1);                    }
-      else if (aLn === 2) {  fn.call(fn._E_ctx, arg1, arg2);              }
-      else if (aLn === 3) {  fn.call(fn._E_ctx, arg1, arg2, arg3);        }
-      else if (aLn === 4) {  fn.call(fn._E_ctx, arg1, arg2, arg3, arg4);  }
-      else                {  fn.apply(fn._E_ctx, args);                   }
+      switch (aLn) {
+        case 0:
+          fn.call(fn._E_ctx);
+          break;
+        case 1:
+          fn.call(fn._E_ctx, arg1);
+          break;
+        case 2:
+          fn.call(fn._E_ctx, arg1, arg2);
+          break;
+        case 3:
+          fn.call(fn._E_ctx, arg1, arg2, arg3);
+          break;
+        case 4:
+          fn.call(fn._E_ctx, arg1, arg2, arg3, arg4);
+          break;
+        default:
+          fn.apply(fn._E_ctx, args);
+      }
     }
 
     return true;
