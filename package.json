@@ -1,8 +1,9 @@
 {
   "name": "evemit",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Minimal and fast JavaScript event emitter for Node.js and front-end (only 1kb minified!).",
   "main": "./evemit.js",
+  "types": "./evemit.d.ts",
   "keywords": [
     "event",
     "emitter",

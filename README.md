@@ -3,15 +3,15 @@
 [![Actual version published on NPM](https://badge.fury.io/js/evemit.png)](https://www.npmjs.org/package/evemit)
 [![npm module downloads per month](http://img.shields.io/npm/dm/evemit.svg)](https://www.npmjs.org/package/evemit)
 
-Minimal and fast JavaScript event emitter for Node.js and front-end.<br>
+Minimal and fast JavaScript / TypeScript event emitter for Node.js and front-end.<br>
 Only 1kb minified (577 bytes gzipped).
-
 
 ## Getting started
 
 ### Install
 
 Via `NPM`
+
 ```shell
 npm install evemit --save
 ```
@@ -22,8 +22,9 @@ If `Evemit` is used in CommonJS environment (Node.js, Browserify, Webpack, ...),
 it is exposed as module with `module.exports`.
 
 So in CommonJS, _evemit_ is not exposed in the global scope (even on client side) :)
+
 ```js
-var ev = require('evemit');
+const ev = require('evemit');
 
 // true (it's the constructor)
 console.log(typeof ev === 'function');
@@ -33,6 +34,7 @@ console.log(typeof Evemit);
 ```
 
 Basic usage (without CommonJS)
+
 ```js
 // true
 console.log(typeof Evemit === 'function');
@@ -44,12 +46,12 @@ console.log(typeof window.Evemit === 'function');
 ### Usage
 
 ```js
-var Evemit = require('evemit');
+const Evemit = require('evemit');
 
 // Or if you are not in an environment CommonJS (Node.js, Browserify, Webpack, ...)
 // uses directly `Evemit`, without `var Evemit = require('evemit')`
 
-var obj = new Evemit();
+const obj = new Evemit();
 
 obj.on('say-hello', function(hello) {
   console.log(hello); // Hello World!
@@ -57,7 +59,6 @@ obj.on('say-hello', function(hello) {
 
 obj.emit('say-hello', 'Hello World!');
 ```
-
 
 ## API
 
@@ -107,6 +108,7 @@ obj.emit('ping');
 ```
 
 With arguments passed to the listeners
+
 ```js
 obj.emit('ping', 'arg1', 'arg2', {an: 'object'});
 ```
@@ -130,24 +132,28 @@ a.off('say-hello', myCallback);
 ### Evemit.listeners({string} [event])
 
 Get all listeners
+
 ```js
 // Returns an array containing all listeners
 obj.listeners();
 ```
 
 Count all listeners
+
 ```js
 // Returns a number.
 obj.listeners().length;
 ```
 
 Get all listeners of a given event
+
 ```js
 // Returns an array of listeners
 obj.listeners('say-hello');
 ```
 
 Count all listeners of a given event
+
 ```js
 obj.listeners('say-hello').length;
 ```
@@ -155,6 +161,7 @@ obj.listeners('say-hello').length;
 The methods of the `Array` object can be used to manage the listeners.
 
 Example
+
 ```js
 // reverse the order of the listeners execution
 obj.listeners('my-event').reverse();
@@ -163,25 +170,26 @@ obj.listeners('my-event').reverse();
 obj.listeners('my-event').slice(1, 3);
 
 // Removes the first listener of the stack, and returns that listener
-var firstListener = obj.listeners('my-event').shift();
+const firstListener = obj.listeners('my-event').shift();
 
 // Removes the last listener of the stack, and returns that listener
-var lastListener = obj.listeners('my-event').pop();
+const lastListener = obj.listeners('my-event').pop();
 
 // ...
 ```
 
 Use the property `obj.events` if you want to get an object like
+
 ```
 {event1: [array of listeners], event2: [array of listeners], ...}
 ```
-
 
 ## Unit tests
 
 `evemit` is unit tested with [Unit.js](http://unitjs.com).
 
 Run the tests
+
 ```shell
 cd node_modules/evemit
 
@@ -190,11 +198,9 @@ npm test
 
 To execute the tests on client side, download the `test` directory and go on _test/index.html_ file with your browser.
 
-
 ## LICENSE
 
 [MIT](https://github.com/Nicolab/evemit/blob/master/LICENSE) (c) 2014, Nicolas Tallefourtane.
-
 
 ## Author
 
