@@ -1,6 +1,6 @@
 {
   "name": "evemit",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Minimal and fast JavaScript event emitter for Node.js and front-end (only 1kb minified!).",
   "main": "./evemit.js",
   "types": "./evemit.d.ts",
@@ -22,7 +22,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:Nicolab/evemit.git"
+    "url": "git+ssh://git@github.com/Nicolab/evemit.git"
   },
   "bugs": "https://github.com/Nicolab/evemit/issues",
   "scripts": {
