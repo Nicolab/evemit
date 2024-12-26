@@ -3,8 +3,10 @@
 [![Actual version published on NPM](https://badge.fury.io/js/evemit.png)](https://www.npmjs.org/package/evemit)
 [![npm module downloads per month](http://img.shields.io/npm/dm/evemit.svg)](https://www.npmjs.org/package/evemit)
 
-Minimal and fast JavaScript / TypeScript event emitter for Node.js and front-end.<br>
+Minimal and fast JavaScript / TypeScript event emitter for Node.js, Bun.js, Deno and front-end.<br>
 Only 1kb minified (577 bytes gzipped).
+
+Used in prod on several projects (front-end and back-end) for over 10 years, very stable. API does not change, no breaking changes. :rocket:
 
 ## Getting started
 
@@ -18,13 +20,14 @@ npm install evemit --save
 
 Or download the [evemit.min.js](evemit.min.js) file.
 
-If `Evemit` is used in CommonJS environment (Node.js, Browserify, Webpack, ...),
+If `Evemit` is used in ESM or CommonJS environment (Node.js, Vite.js, Webpack, ...),
 it is exposed as module with `module.exports`.
 
-So in CommonJS, _evemit_ is not exposed in the global scope (even on client side) :)
+So in CommonJS and ES Modules, _evemit_ is not exposed in the global scope (even on client side) :)
 
 ```js
-const ev = require('evemit');
+import ev from 'evemit';
+// or const ev = require('evemit');
 
 // true (it's the constructor)
 console.log(typeof ev === 'function');
@@ -33,7 +36,7 @@ console.log(typeof ev === 'function');
 console.log(typeof Evemit);
 ```
 
-Basic usage (without CommonJS)
+Basic usage (without builder)
 
 ```js
 // true
@@ -46,7 +49,7 @@ console.log(typeof window.Evemit === 'function');
 ### Usage
 
 ```js
-const Evemit = require('evemit');
+import Evemit from 'evemit';
 
 // Or if you are not in an environment CommonJS (Node.js, Browserify, Webpack, ...)
 // uses directly `Evemit`, without `var Evemit = require('evemit')`
